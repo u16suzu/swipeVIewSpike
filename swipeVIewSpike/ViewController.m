@@ -25,8 +25,7 @@
     [self.view addSubview:self.settingsView];
 
 
-    UICustomeGestureRecognizer *ges =
-      [[UICustomeGestureRecognizer alloc]initWithTarget:self action:@selector(hoge:)];
+    UICustomeGestureRecognizer *ges = [[UICustomeGestureRecognizer alloc]init];
     [self.view addGestureRecognizer:ges];
     
     ges.customDelegate = self;
@@ -39,9 +38,6 @@
     CGRect f = self.settingsView.frame;
     CGRect newF = CGRectMake(f.origin.x + distance, f.origin.y, f.size.width, f.size.height);
     self.settingsView.frame = newF;
-}
-
-- (void)hoge:(UICustomeGestureRecognizer*)sender{
 }
 
 - (void)didReceiveMemoryWarning
