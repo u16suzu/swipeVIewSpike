@@ -40,36 +40,16 @@ typedef enum {
     
     CGPoint nowPoint = [[touches anyObject] locationInView:self.view];
     CGPoint prevPoint = [[touches anyObject] previousLocationInView:self.view];
-//    LocalStrokeDirection currentDirection;  // 前回と今回とを比較しどの方向に移動したか
     
     float xDistance = nowPoint.x - prevPoint.x;
-    float yDistance = nowPoint.y - prevPoint.y;
-
-
-    NSLog(@"point: %@ %@", NSStringFromCGPoint(nowPoint), NSStringFromCGPoint(prevPoint) );
-    NSLog(@"dis: %lf %lf ", xDistance, yDistance);
     
-    [self.customDelegate move:xDistance];
+    [self.customDelegate moved:xDistance];
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
     [super touchesEnded:touches withEvent:event];
-
-    switch (self.state) {
-        case UIGestureRecognizerStatePossible:
-        case UIGestureRecognizerStateFailed:
-            self.state = UIGestureRecognizerStateFailed;
-            break;
-        case UIGestureRecognizerStateBegan:
-        case UIGestureRecognizerStateChanged:
-            self.state = UIGestureRecognizerStateEnded;
-            break;
-        default:
-            
-            self.state = UIGestureRecognizerStateCancelled;
-            break;
-    }
     
+    [self.customDelegate ended];
 }
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event{
     [super touchesCancelled:touches withEvent:event];

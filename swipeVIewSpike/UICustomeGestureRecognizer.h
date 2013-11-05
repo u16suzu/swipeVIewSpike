@@ -11,7 +11,8 @@
 
 @protocol customGestureDelegate <NSObject>
 @required
-- (void)move:(float)distance;
+- (void)moved:(float)distance;
+- (void)ended;
 @end
 
 typedef enum {

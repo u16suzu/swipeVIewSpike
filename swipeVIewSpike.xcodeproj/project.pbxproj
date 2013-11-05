@@ -22,6 +22,7 @@
 		6436079D18293B3A004F425D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6436079B18293B3A004F425D /* InfoPlist.strings */; };
 		6436079F18293B3A004F425D /* swipeVIewSpikeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6436079E18293B3A004F425D /* swipeVIewSpikeTests.m */; };
 		643607AA18293B71004F425D /* UICustomeGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 643607A918293B71004F425D /* UICustomeGestureRecognizer.m */; };
+		643607AD18294253004F425D /* UIView+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 643607AC18294253004F425D /* UIView+Utilities.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		6436079E18293B3A004F425D /* swipeVIewSpikeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = swipeVIewSpikeTests.m; sourceTree = "<group>"; };
 		643607A818293B71004F425D /* UICustomeGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICustomeGestureRecognizer.h; sourceTree = "<group>"; };
 		643607A918293B71004F425D /* UICustomeGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICustomeGestureRecognizer.m; sourceTree = "<group>"; };
+		643607AB18294253004F425D /* UIView+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Utilities.h"; sourceTree = "<group>"; };
+		643607AC18294253004F425D /* UIView+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Utilities.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,8 @@
 				6436078218293B39004F425D /* AppDelegate.h */,
 				6436078318293B39004F425D /* AppDelegate.m */,
 				6436078518293B39004F425D /* Main.storyboard */,
+				643607AB18294253004F425D /* UIView+Utilities.h */,
+				643607AC18294253004F425D /* UIView+Utilities.m */,
 				643607A818293B71004F425D /* UICustomeGestureRecognizer.h */,
 				643607A918293B71004F425D /* UICustomeGestureRecognizer.m */,
 				6436078818293B39004F425D /* ViewController.h */,
@@ -256,6 +261,7 @@
 			files = (
 				643607AA18293B71004F425D /* UICustomeGestureRecognizer.m in Sources */,
 				6436078A18293B39004F425D /* ViewController.m in Sources */,
+				643607AD18294253004F425D /* UIView+Utilities.m in Sources */,
 				6436078418293B39004F425D /* AppDelegate.m in Sources */,
 				6436078018293B39004F425D /* main.m in Sources */,
 			);
