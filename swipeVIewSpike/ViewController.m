@@ -55,23 +55,26 @@
 
 - (void)ended{
     float threashHold  = self.view.width/2;
+    float maxLeftPoint = 0;
+    float rightPoint = self.settingsView.origin.x + self.view.width;
     
-    float maxLeft = -30;
-    float left = self.settingsView.origin.x + self.view.width;
+    float velocity = 840;
+    float minimumAnimationDuration = 0.15f;
     
-    if( left >= threashHold ){ // open
-        float distance = 320-left;
-        NSTimeInterval duration = MAX(distance/ABS(840), 0.15f);
+    
+    if( rightPoint >= threashHold ){ // open
+        float distance = self.view.width-rightPoint;
+        NSTimeInterval duration = MAX(distance/ABS(velocity), minimumAnimationDuration);
         
         [UIView animateWithDuration:duration
                          animations:^{
-                             [self.settingsView setXOrigin:maxLeft];
+                             [self.settingsView setXOrigin:maxLeftPoint];
                          }
                          completion:^(BOOL finished){
                          }];
-    } else if( left < self.view.width - threashHold ){
-        float distance = 320-left;
-        NSTimeInterval duration = MAX(distance/ABS(840), 0.15f);
+    } else if( rightPoint < self.view.width - threashHold ){
+        float distance = self.view.width-rightPoint;
+        NSTimeInterval duration = MAX(distance/ABS(velocity), minimumAnimationDuration);
     
         [UIView animateWithDuration:duration animations:^{
             [self.settingsView setXOrigin:-(self.view.width)];
